@@ -28,6 +28,5 @@ node_modules
 /build/
 
 ### Vaadin ###
-/frontend/generated/
-/frontend/index.html
-/.npmrc
+/src/main/frontend/generated/
+/src/main/frontend/index.html
