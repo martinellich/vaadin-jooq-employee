@@ -1,7 +1,7 @@
-package io.seventytwo.demo.vaadinjooq.employee.ui;
+package ch.martinelli.demo.vaadinjooq.employee.ui;
 
-import io.seventytwo.demo.vaadinjooq.employee.model.tables.records.DepartmentRecord;
-import io.seventytwo.demo.vaadinjooq.employee.model.tables.records.EmployeeRecord;
+import ch.martinelli.demo.vaadinjooq.employee.model.tables.records.DepartmentRecord;
+import ch.martinelli.demo.vaadinjooq.employee.model.tables.records.EmployeeRecord;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -21,10 +21,10 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import java.util.List;
 
-import static io.seventytwo.demo.vaadinjooq.employee.model.tables.Department.DEPARTMENT;
-import static io.seventytwo.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.DELETE;
-import static io.seventytwo.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.INSERT;
-import static io.seventytwo.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.UPDATE;
+import static ch.martinelli.demo.vaadinjooq.employee.model.tables.Department.DEPARTMENT;
+import static ch.martinelli.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.DELETE;
+import static ch.martinelli.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.INSERT;
+import static ch.martinelli.demo.vaadinjooq.employee.ui.EmployeeForm.ChangeHandler.Operation.UPDATE;
 
 @UIScope
 @SpringComponent

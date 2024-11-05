@@ -1,7 +1,7 @@
-package io.seventytwo.demo.vaadinjooq.employee.ui;
+package ch.martinelli.demo.vaadinjooq.employee.ui;
 
-import io.seventytwo.demo.vaadinjooq.employee.model.tables.records.EmployeeRecord;
-import io.seventytwo.demo.vaadinjooq.employee.model.tables.records.VEmployeeRecord;
+import ch.martinelli.demo.vaadinjooq.employee.model.tables.records.EmployeeRecord;
+import ch.martinelli.demo.vaadinjooq.employee.model.tables.records.VEmployeeRecord;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -11,13 +11,13 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
-import io.seventytwo.vaadinjooq.ui.RecordGrid;
+import ch.martinelli.oss.vaadinjooq.ui.RecordGrid;
 import org.jooq.DSLContext;
 
 import java.util.Map;
 
-import static io.seventytwo.demo.vaadinjooq.employee.model.tables.Employee.EMPLOYEE;
-import static io.seventytwo.demo.vaadinjooq.employee.model.tables.VEmployee.V_EMPLOYEE;
+import static ch.martinelli.demo.vaadinjooq.employee.model.tables.Employee.EMPLOYEE;
+import static ch.martinelli.demo.vaadinjooq.employee.model.tables.VEmployee.V_EMPLOYEE;
 import static com.vaadin.flow.data.provider.SortDirection.ASCENDING;
 import static org.jooq.impl.DSL.lower;
 
