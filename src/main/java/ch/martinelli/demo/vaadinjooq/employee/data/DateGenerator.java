@@ -3,7 +3,6 @@ package ch.martinelli.demo.vaadinjooq.employee.data;
 import ch.martinelli.demo.vaadinjooq.employee.model.Sequences;
 import ch.martinelli.demo.vaadinjooq.employee.model.tables.Department;
 import ch.martinelli.demo.vaadinjooq.employee.model.tables.Employee;
-import ch.martinelli.demo.vaadinjooq.employee.model.tables.records.EmployeeRecord;
 import net.datafaker.Faker;
 import org.jooq.DSLContext;
 import org.springframework.boot.ApplicationArguments;
@@ -35,16 +34,16 @@ public class DateGenerator implements ApplicationRunner {
 
         var faker = new Faker();
         for (int i = 0; i < 100; i++) {
-            EmployeeRecord employeeRecord = dslContext.newRecord(Employee.EMPLOYEE);
-            employeeRecord.setId(dslContext.nextval(Sequences.EMPLOYEE_SEQ).intValue());
-            employeeRecord.setFirstName(faker.name().firstName());
-            employeeRecord.setLastName(faker.name().lastName());
+            var employee = dslContext.newRecord(Employee.EMPLOYEE);
+            employee.setId(dslContext.nextval(Sequences.EMPLOYEE_SEQ).intValue());
+            employee.setFirstName(faker.name().firstName());
+            employee.setLastName(faker.name().lastName());
             if (i % 7 == 0) {
-                employeeRecord.setDepartmentId(hrDepartment.getId());
+                employee.setDepartmentId(hrDepartment.getId());
             } else {
-                employeeRecord.setDepartmentId(itDepartment.getId());
+                employee.setDepartmentId(itDepartment.getId());
             }
-            employeeRecord.store();
+            employee.store();
         }
     }
 }

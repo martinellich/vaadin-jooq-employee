@@ -40,8 +40,6 @@ public class EmployeeForm extends FormLayout {
     private final ComboBox<DepartmentRecord> departmentId = new ComboBox<>("Department");
 
     private final Binder<EmployeeRecord> binder = new Binder<>(EmployeeRecord.class);
-    private final Button save;
-    private final Button delete;
 
     private EmployeeRecord employee;
 
@@ -106,11 +104,11 @@ public class EmployeeForm extends FormLayout {
                 })
                 .bind(EmployeeRecord::getDepartmentId, EmployeeRecord::setDepartmentId);
 
-        save = new Button("Save");
+        var save = new Button("Save");
         save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         save.addClickListener(this::save);
 
-        delete = new Button("Delete");
+        var delete = new Button("Delete");
         delete.addClickListener(this::delete);
 
         add(id, firstName, lastName, departmentId, new HorizontalLayout(save, delete));
